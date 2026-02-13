@@ -1,0 +1,152 @@
+/* Background */
+body {
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: #fff;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Header Container */
+.detail-header {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 20px 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Title */
+.header-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Subtitle */
+.header-subtitle {
+    font-size: 14px;
+    color: #ccc;
+    margin: 0;
+}
+
+/* Back Button */
+.btn-back {
+    background: transparent;
+    border: 2px solid #ffc107;
+    color: #ffc107;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-back:hover {
+    background: #ffc107;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* Card */
+.movie-card {
+    background: #1c1c1c;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Poster */
+.poster-wrapper {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.poster-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.poster-img:hover {
+    transform: scale(1.05);
+}
+
+/* Title */
+.movie-title {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+/* Meta */
+.movie-meta {
+    color: #bbb;
+    font-size: 14px;
+}
+
+/* Rating Box */
+.rating-box {
+    background: #ffc107;
+    color: #000;
+    padding: 8px 15px;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Plot */
+.plot-text {
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Button */
+.btn-success {
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    transform: scale(1.05);
+}
+
+.toast-wrapper {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+.custom-toast {
+    min-width: 320px;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-weight: 500;
+    color: #fff;
+    background: rgba(30, 30, 30, 0.95);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.4s ease;
+}
+
+.custom-toast.success {
+    border-left: 5px solid #28a745;
+}
+
+.custom-toast.error {
+    border-left: 5px solid #dc3545;
+}
+
+.custom-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}

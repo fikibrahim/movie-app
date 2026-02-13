@@ -1,0 +1,149 @@
+body.dark-theme {
+    background-color: #0b0b0b;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* HERO */
+.hero-banner {
+    height: 70vh;
+    background:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.4), #0b0b0b),
+        url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba")
+            center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.hero-subtitle {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    padding: 12px 20px;
+}
+
+.search-input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: none;
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.7);
+}
+
+/* MOVIE CARD */
+.movie-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.movie-card img {
+    height: 380px;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.movie-card:hover img {
+    transform: scale(1.1);
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(229, 9, 20, 0.4);
+}
+
+/* Overlay */
+.movie-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.movie-card:hover .movie-overlay {
+    opacity: 1;
+}
+
+.overlay-title {
+    font-weight: 600;
+}
+
+/* Skeleton */
+.skeleton-card {
+    height: 380px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.loading-text {
+    font-size: 16px;
+    color: gray;
+}
+
+.toast-wrapper {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+.custom-toast {
+    min-width: 320px;
+    padding: 14px 24px;
+    margin-top: 10px;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    background: rgba(30, 30, 30, 0.85);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.4s ease;
+}
+
+.custom-toast.success {
+    border-left: 5px solid #28a745;
+}
+
+.custom-toast.error {
+    border-left: 5px solid #dc3545;
+}
+
+.custom-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
